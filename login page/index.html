@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Sign-Up with Chatbot</title>
+    <link rel="stylesheet" href="style.css"> <!-- External CSS Link -->
+</head>
+<body>
+    <!-- Login Form -->
+    <div class="container" id="loginContainer">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showSignUp()">Sign Up</a></p>
+    </div>
+
+    <!-- Sign-Up Form -->
+    <div class="container" id="signupContainer" style="display: none;">
+        <h2>Sign Up</h2>
+        <form id="signupForm">
+            <label for="newUsername">Create Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="newPassword">Create Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLogin()">Login</a></p>
+    </div>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <h3>Chatbot</h3>
+        <div class="chatbox" id="chatbox">
+            <p>Chatbot: Hello! How can I help you?</p>
+        </div>
+        <input type="text" id="chatInput" placeholder="Type your message here">
+        <button id="sendButton" onclick="sendMessage()">Send</button>
+    </div>
+
+    <script src="script.js"></script> <!-- External JS Link -->
+</body>
+</html>
